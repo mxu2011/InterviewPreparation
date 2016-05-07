@@ -16,7 +16,7 @@ public class TallestPeopleTower {
 			return s1;
 		}
 	}
-	public static void buildTower(ArrayList<Person> circus, 
+	public static void buildTower(ArrayList<Person> circus,
 			ArrayList<ArrayList<Person>> res, int depth) {
 		if (depth >= circus.size())
 			return;
@@ -35,7 +35,7 @@ public class TallestPeopleTower {
 		buildTower(circus, res, depth + 1);
 	}
 	public static ArrayList<Person> tower(ArrayList<Person> circus){
-		ArrayList<Person> res = new ArrayList<Person>();
+		ArrayList<Person> res = new ArrayList<>();
 		if (circus == null || circus.isEmpty())
 			return res;
 		Collections.sort(circus);
