@@ -16,6 +16,8 @@ public class TallestPeopleTower {
 			return s1;
 		}
 	}
+
+	//User recursion to build towers
 	public static void buildTower(ArrayList<Person> circus,
 			ArrayList<ArrayList<Person>> res, int depth) {
 		if (depth >= circus.size())
@@ -39,11 +41,17 @@ public class TallestPeopleTower {
 		if (circus == null || circus.isEmpty())
 			return res;
 		Collections.sort(circus);
+
+		//Start from depth 0
 		int depth = 0;
 		// tallest person tower until the current person
 		// (longest increasing subsequence until cur index)
 		ArrayList<ArrayList<Person>> tmpRes = new ArrayList<ArrayList<Person>>();
+
+		//Basiclly build a series of towers
 		buildTower(circus, tmpRes, depth);
+
+		//compare towers and pick the longest tower
 		for (int i = 0; i < tmpRes.size(); i++) {
 			res = pickLongerSeq(res, tmpRes.get(i));
 		}
@@ -52,7 +60,7 @@ public class TallestPeopleTower {
 	
 	public static void main(String[] args) {
 		//test1();
-		test2();
+		//test2();
 		test3();
 	}
 
