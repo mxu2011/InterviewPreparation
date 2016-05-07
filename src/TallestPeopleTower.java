@@ -51,6 +51,12 @@ public class TallestPeopleTower {
 	}
 	
 	public static void main(String[] args) {
+		//test1();
+		test2();
+		test3();
+	}
+
+	private static void test1() {
 		Person p1 = new Person(0, 65, 100);
 		Person p2 = new Person(1, 70, 150);
 		Person p3 = new Person(2, 56, 90);
@@ -67,14 +73,68 @@ public class TallestPeopleTower {
 		System.out.println("Test case 1: ");
 		System.out.println("Circus members: ");
 		for (int i = 0; i < circus.size(); i++) {
-			System.out.print(circus.get(i).GetId() + "(" + circus.get(i).GetHeight() + 
+			System.out.print(circus.get(i).GetId() + "(" + circus.get(i).GetHeight() +
 					", " + circus.get(i).GetWeight() + ")->");
 		}
 		ArrayList<Person> res = tower(circus);
 		System.out.println();
 		System.out.println("The tallest tower member: ");
 		for (int i = 0; i < res.size(); i++) {
-			System.out.print(res.get(i).GetId() + "(" + res.get(i).GetHeight() + 
+			System.out.print(res.get(i).GetId() + "(" + res.get(i).GetHeight() +
+					", " + res.get(i).GetWeight() + ")->");
+		}
+	}
+
+	private static void test2() {
+		Person p1 = new Person(0, 3, 2);
+		Person p2 = new Person(1, 5, 9);
+		Person p3 = new Person(2, 6, 7);
+		Person p4 = new Person(3, 7, 8);
+
+		ArrayList<Person> circus = new ArrayList<Person>();
+		circus.add(p1);
+		circus.add(p2);
+		circus.add(p3);
+		circus.add(p4);
+
+		System.out.println("Test case 2: ");
+		System.out.println("Circus members: ");
+		for (int i = 0; i < circus.size(); i++) {
+			System.out.print(circus.get(i).GetId() + "(" + circus.get(i).GetHeight() +
+					", " + circus.get(i).GetWeight() + ")->");
+		}
+		ArrayList<Person> res = tower(circus);
+		System.out.println();
+		System.out.println("The tallest tower member: ");
+		for (int i = 0; i < res.size(); i++) {
+			System.out.print(res.get(i).GetId() + "(" + res.get(i).GetHeight() +
+					", " + res.get(i).GetWeight() + ")->");
+		}
+	}
+
+	private static void test3() {
+		Person p1 = new Person(0, 3, 2);
+		Person p2 = new Person(1, 8, 4);
+		Person p3 = new Person(2, 6, 7);
+		Person p4 = new Person(3, 9, 5);
+
+		ArrayList<Person> circus = new ArrayList<Person>();
+		circus.add(p1);
+		circus.add(p2);
+		circus.add(p3);
+		circus.add(p4);
+
+		System.out.println("Test case 2: ");
+		System.out.println("Circus members: ");
+		for (int i = 0; i < circus.size(); i++) {
+			System.out.print(circus.get(i).GetId() + "(" + circus.get(i).GetHeight() +
+					", " + circus.get(i).GetWeight() + ")->");
+		}
+		ArrayList<Person> res = tower(circus);
+		System.out.println();
+		System.out.println("The tallest tower member: ");
+		for (int i = 0; i < res.size(); i++) {
+			System.out.print(res.get(i).GetId() + "(" + res.get(i).GetHeight() +
 					", " + res.get(i).GetWeight() + ")->");
 		}
 	}
